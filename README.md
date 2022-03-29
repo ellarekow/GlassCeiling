@@ -1,3 +1,4 @@
 # GlassCeiling
 
-Contributors: Me
+Contributors: 
+- Ella Rekow
