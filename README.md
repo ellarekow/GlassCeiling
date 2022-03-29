@@ -3,4 +3,5 @@
 Contributors: 
 - Ella Rekow
 - Kristen Hawken
-- Callie Bockart 
+- Callie Bockart
+- Lydia
