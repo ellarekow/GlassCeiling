@@ -1,0 +1,16 @@
+body {
+    background-color: #AFADF0;
+
+    /* text-align: center; */
+
+    color: white;
+
+    font-family: "Roboto";
+}
+
+h1 {
+    text-align: left;
+    font-family: 'Roboto';
+    font-style: normal;
+    color: #FFFFFF;
+}
