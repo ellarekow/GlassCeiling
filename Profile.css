@@ -1,3 +1,14 @@
 h1 {
+    text-align: right;
+    font-family: 'Roboto';
+    font-style: normal;
+    color: #FFFFFF;
+}
+
+body {
     text-align: left;
+    font-family: 'Roboto';
+    font-style: normal;
+    color: #FFFFFF;
+    background-color: #AFADF0;
 }
