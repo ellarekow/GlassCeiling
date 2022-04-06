@@ -1,49 +1,66 @@
 body {
     background-color: #AFADF0;
-
-
 }
+
 #pinkbox{
-position: absolute;
-left: 275px;
-top: 100px;
-width: 700px;
-height: 400px;
-background: #A76571;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-border-radius: 12px;
+    position: absolute;
+    left: 275px;
+    top: 100px;
+    width: 700px;
+    height: 400px;
+    background: #A76571;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 12px;
 }
 
 #whitebox{
     position: absolute;
-    left: 200px;
-    top: 120px;
-    width: 300px;
-    height: 200px;
+    left: 150px;
+    top: 80px;
+    width: 400px;
+    height: 250px;
     background: #FFFFFF;
     border-radius: 12px;
-    }
+}
 
 h1{
     
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
-    font-size: 48px;
-    line-height: 75px;
+    font-size: 40px;
     text-align: center;
-    
+    line-height: 20px;
     color: #FFFFFF;
-
 }
+
 h2{
     text-align: center;
     font-family: 'Roboto';
-font-style: normal;
-font-weight: 400;
-font-size: 20px;
-line-height: 38px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: #FFFFFF;
+}
 
-color: #FFFFFF;
+h3{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #000000;
+}
 
+.button{
+    font-weight: bold;
+    width: 100px;
+    height: 35px;
+    position: absolute;
+    left: 300px;
+    bottom: 20px;
+    background-color: #FFFFFF;
+    border: none;
+    border-radius: 9px;
 }
