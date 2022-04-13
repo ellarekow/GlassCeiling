@@ -13,3 +13,9 @@ body {
     color: #FFFFFF;
     background-color: #AFADF0;
 }
+
+input[type="text"] {
+    width: 700px;
+    height: 100px;
+    color: #FFFFFF;
+}
