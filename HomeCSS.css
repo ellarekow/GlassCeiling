@@ -30,12 +30,29 @@ input[type="text"] {
     width: 50px;
 }
 
-.search-bar button {
+/*FIXME: Get the button to go to the RIGHT side of the screen
+AND Get the background to go transparent*/
+.search-button button {
     border: 0;
+    background: transparent;
+    float: right;
+}
+
+.profile-button button img {
+    height: 50px;
+    width: 50px;
+}
+
+.profile-button button {
+    border: 0;
+    background: transparent;
+}
+
+/*
     border-radius: 50%;
     width: 100px;
     height: 200px;
-    background: transparent;
+    
     cursor: pointer;
     float: right;
-}
+*/
