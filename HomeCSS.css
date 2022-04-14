@@ -30,8 +30,6 @@ input[type="text"] {
     width: 50px;
 }
 
-/*FIXME: Get the button to go to the RIGHT side of the screen
-AND Get the background to go transparent*/
 .search-button button {
     border: 0;
     background: transparent;
@@ -47,12 +45,3 @@ AND Get the background to go transparent*/
     border: 0;
     background: transparent;
 }
-
-/*
-    border-radius: 50%;
-    width: 100px;
-    height: 200px;
-    
-    cursor: pointer;
-    float: right;
-*/
