@@ -1,0 +1,29 @@
+body {
+    text-align: center;
+    /* font-size: 20; */
+    font-family: 'Roboto';
+    font-style: normal;
+    color: #FFFFFF;
+    background-color: #AFADF0;
+}
+.search-button button img {
+    height: 50px;
+    width: 50px;
+}
+
+.search-button button {
+    border: 0;
+    background: transparent;
+    float: right;
+}
+
+.profile-button button img {
+    height: 50px;
+    width: 50px;
+}
+
+.profile-button button {
+    border: 0;
+    background: transparent;
+    float: left;
+}
