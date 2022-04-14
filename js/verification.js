@@ -77,10 +77,10 @@ function emailCheck(email) {
 
 
 function getNotification(bool, id) {
-    var label = document.getElementById("labelNotify" + id);
+    var label = document.getElementById("labelNotify");
     if (label == null) {
         label = document.createElement("LABEL");
-        label.id = "labelNotify" + id;
+        label.id = "labelNotify";
         label.setAttribute('class', 'errorMessage');
     }
 
