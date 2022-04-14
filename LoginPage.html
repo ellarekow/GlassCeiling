@@ -1,6 +1,11 @@
 <head>
     <link rel="stylesheet" href="styles.css">
     <script src="js/verification.js"></script>
+    <style>
+        .errorMessage {
+            color: red;
+        }
+    </style>
 </head>
 
 <body>
@@ -9,18 +14,20 @@
         <img src="images/GC.png" alt="Glass Ceiling Logo" width="100" heigth="100" />
         <h1>Welcome back to Glass Ceiling!</h1>
         <h1>Login</h1>
-        <form id="Login Credentials"></form>
-        <p id="username">
-            <label for="username">Username</label> <br>
-            <input id="username" type="text" name="username">
-        </p>
+        <form id="Login Credentials">
+            <p id="uname">
+                <label for="uname">Username</label> <br>
+                <input id="username" type="text" name="username">
+            </p>
 
-        <p id="password">
-            <label for="password">Password</label> <br>
-            <input id="password" type="text" name="password">
-        </p>
+            <p id="pword">
+                <label for="pword">Password</label> <br>
+                <input id="password" type="text" name="password">
+            </p>
 
-        <input onClick="loginValidate" type="button" id="submit" value="submit">Enter</button>
+        </form>
+
+        <input onClick="loginValidate()" type="button" id="submit" value="submit"></button>
 
         <p>
             Never posted before? <br>
