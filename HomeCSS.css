@@ -24,3 +24,18 @@ input[type="text"] {
 .header {
     color:#271847
 }
+
+.search-button button img {
+    height: 50px;
+    width: 50px;
+}
+
+.search-bar button {
+    border: 0;
+    border-radius: 50%;
+    width: 100px;
+    height: 200px;
+    background: transparent;
+    cursor: pointer;
+    float: right;
+}
