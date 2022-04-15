@@ -1,7 +1,6 @@
 import org.junit.*;
 import org.openqa.selenium.WebDriver;
 
-import java.beans.Transient;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.By;
@@ -9,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import static org.junit.Assert.assertEquals;
 
-public class Tests {
+public class Tests{
 
     static WebDriver driver;
 
