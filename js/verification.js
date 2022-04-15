@@ -14,6 +14,11 @@ function loginValidate() {
     }
 }
 
+
+function postMove() {
+    location.href = "./Home.html"
+}
+
 function signUpValidate() {
     const uNameResult = nameCheck(document.forms["Sign Up Credentials"]["username"].value);
     const emailResult = emailCheck(document.forms["Sign Up Credentials"]["email"].value);
@@ -77,15 +82,16 @@ function emailCheck(email) {
 
 
 function getNotification(bool, id) {
-    var label = document.getElementById("labelNotify");
+    var label = document.getElementById("labelNotify" + id);
     if (label == null) {
-        label = document.createElement("LABEL");
-        label.id = "labelNotify";
+        label = document.createElement("LABEL" + id);
+        label.id = "labelNotify" + id;
         label.setAttribute('class', 'errorMessage');
     }
+    console.log(bool, id);
 
-    const errors = { pwordc: "<br> Please ensure your passwords match", eml: "<br> Please enter a valid email", uname: "<br> Please enter a valid username", pword: "<br>Please enter a valid password" }
-    errors[id]
+    const errors = { pwordc: "Please enter valid credentials", eml: "Please enter valid credentials", uname: "Please enter valid credentials", pword: "Please enter valid credentials" };
+    errors[id];
 
     label.innerHTML = bool ? "" : errors[id];
     document.getElementById(id).appendChild(label);
