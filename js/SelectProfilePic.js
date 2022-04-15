@@ -39,6 +39,12 @@ function changePic(){
        pic=blank;
     }else if(choice== "blueberry"){
         pic=blueberry;
+    }else if(choice== "pear"){
+        pic=pear;
+    }else if(choice== "kiwi"){
+        pic=kiwi;
+    }else if(choice== "pomegranate"){
+        pic=pomegranate;
     }else{
         pic=plum;
     }
@@ -46,6 +52,5 @@ function changePic(){
 }
 
 function display(){
-    let location = document.getElementById("image");
-    location.append(pic);
+    document.getElementById("image").replaceChildren(pic);
 }
