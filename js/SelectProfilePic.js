@@ -1,9 +1,48 @@
-var location = document.getElementById("image");
-var blank = document.createElement("img");
+
+let blank = document.createElement("img");
 blank.src="images/blank-profile-photo.jpeg";
 blank.width="100";
 blank.height="100";
 
+let kiwi = document.createElement("img");
+kiwi.src="images/kiwi.png";
+kiwi.width="100";
+kiwi.height="100";
+
+let plum = document.createElement("img");
+plum.src="images/plum.png";
+plum.width="100";
+plum.height="100";
+
+let blueberry = document.createElement("img");
+blueberry.src="images/blueberry.png";
+blueberry.width="100";
+blueberry.height="100";
+
+let pear = document.createElement("img");
+pear.src="images/pear.png";
+pear.width="100";
+pear.height="100";
+
+let pomegranate = document.createElement("img");
+pomegranate.src="images/pomegranate.png";
+pomegranate.width="100";
+pomegranate.height="100";
+
+let pic=blank;
+
+function decidePic(){
+    let choice = document.forms["profile"]["pic"].value;
+    if(choice == "blank"){
+       pic=blank;
+    }else if(choice== "blueberry"){
+        pic=blueberry;
+    }else{
+        pic=plum;
+    }
+}
+
 function display(){
-    location.append(blank);
+    let location = document.getElementById("image");
+    location.append(pic);
 }
