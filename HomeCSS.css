@@ -22,12 +22,14 @@ input[type="text"] {
 }
 
 .header {
-    color:#271847
+    color: #271847
 }
 
 .search-button button img {
     height: 50px;
     width: 50px;
+    position: fixed;
+    right: 10px;
 }
 
 .search-button button {
@@ -39,6 +41,8 @@ input[type="text"] {
 .profile-button button img {
     height: 50px;
     width: 50px;
+    position: fixed;
+    left: 10px;
 }
 
 .profile-button button {

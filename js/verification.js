@@ -30,7 +30,6 @@ function signUpValidate() {
     getNotification(Boolean(pwordResult), "pword");
     getNotification(Boolean(pwordCResult), "pwordc");
 
-    console.log(uNameResult, " ", emailResult, " ", pwordResult, " ", pwordCResult)
 
     if (Boolean(uNameResult) && Boolean(pwordResult) && Boolean(emailResult) && Boolean(pwordCResult)) {
         location.href = "./Home.html"
@@ -70,9 +69,9 @@ function pWordCCheck(pword, pwordC, pwordValid) {
 
 function emailCheck(email) {
     atSplit = email.split('@');
-    if (atSplit.length == 2 && alphaNumCheck(atSplit[0])) {
+    if (atSplit.length == 2 && nameCheck(atSplit[0])) {
         periodSplit = atSplit[1].split('.')
-        if (periodSplit.length == 2 && alphaNumCheck(periodSplit[0] + periodSplit[1])) {
+        if (periodSplit.length == 2 && nameCheck(periodSplit[0] + periodSplit[1])) {
             return true;
         }
     }
@@ -88,11 +87,16 @@ function getNotification(bool, id) {
         label.id = "labelNotify" + id;
         label.setAttribute('class', 'errorMessage');
     }
-    console.log(bool, id);
 
     const errors = { pwordc: "Please enter valid credentials", eml: "Please enter valid credentials", uname: "Please enter valid credentials", pword: "Please enter valid credentials" };
     errors[id];
 
-    label.innerHTML = bool ? "" : errors[id];
+    if (bool)
+        label.innerHTML = "OK";
+    else
+        label.innerHTML = bool ? "" : errors[id];
+
     document.getElementById(id).appendChild(label);
+    console.log(label.id);
+    console.log(label.innerHTML);
 }

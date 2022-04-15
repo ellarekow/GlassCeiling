@@ -1,13 +1,23 @@
 <head>
     <link rel="stylesheet" href="SearchBarCSS.css">
+    <link rel="stylesheet" href="HomeCSS.css">
+    <script src="js/verification.js">
+    </script>
 </head>
 
 <body>
+    <form action="SearchBar.html" class="search-button">
+        <button type="submit"><img src="images/search.png"></button>
+    </form>
+
+    <form action="Profile.html" class="profile-button">
+        <button type="submit"><img src="images/GC.png"></button>
+    </form>
     <div class="container">
         <form action="SearchResults.html" class="search-bar">
             <input type="text" placeholder="Search a company or user">
             <button type="submit"><img src="images/search.png"></button>
+            <input onClick="postMove()" type="button" id="quit" value="X">
         </form>
     </div>
 </body>
-

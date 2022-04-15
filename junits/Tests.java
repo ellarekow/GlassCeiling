@@ -41,9 +41,10 @@ public class Tests{
         driver.findElement(By.name("username")).sendKeys("aUserName");
         driver.findElement(By.name("password")).sendKeys("aPassWord1234");
 
-        driver.findElement(By.name("submit")).click();
+        driver.findElement(By.id("submit")).click();
 
-        assertEquals("OK", driver.findElement(By.id("labelNotify")).getText());
+        assertEquals("file:///home/ellarekow/Documents/SE319/Glass%20Ceiling/Project/Home.html", driver.getCurrentUrl());
+
     }
 
     @Test
@@ -54,9 +55,10 @@ public class Tests{
         driver.findElement(By.name("username")).sendKeys("");
         driver.findElement(By.name("password")).sendKeys("");
 
-        driver.findElement(By.name("submit")).click();
+        driver.findElement(By.id("submit")).click();
 
-        assertEquals("Error", driver.findElement(By.id("labelNotify")).getText());
+        assertEquals("Please enter valid credentials", driver.findElement(By.id("labelNotifyuname")).getText());
+        assertEquals("Please enter valid credentials", driver.findElement(By.id("labelNotifypword")).getText());
 
     }
 
@@ -70,10 +72,9 @@ public class Tests{
         driver.findElement(By.name("password")).sendKeys("aPassWord1234");
         driver.findElement(By.name("confirm_password")).sendKeys("aPassWord1234");
 
-        driver.findElement(By.name("submit")).click();
+        driver.findElement(By.id("submit")).click();
 
-        assertEquals("OK", driver.findElement(By.id("labelNotify")).getText());
-
+        assertEquals("file:///home/ellarekow/Documents/SE319/Glass%20Ceiling/Project/Home.html", driver.getCurrentUrl());
     }
 
     @Test
@@ -86,9 +87,12 @@ public class Tests{
         driver.findElement(By.name("password")).sendKeys("");
         driver.findElement(By.name("confirm_password")).sendKeys("");
 
-        driver.findElement(By.name("submit")).click();
+        driver.findElement(By.id("submit")).click();
 
-        assertEquals("ERROR", driver.findElement(By.id("labelNotify")).getText());
+        assertEquals("Please enter valid credentials", driver.findElement(By.id("labelNotifyuname")).getText());
+        assertEquals("Please enter valid credentials", driver.findElement(By.id("labelNotifyeml")).getText());
+        assertEquals("Please enter valid credentials", driver.findElement(By.id("labelNotifypword")).getText());
+        assertEquals("Please enter valid credentials", driver.findElement(By.id("labelNotifypwordc")).getText());
     }
 
 }

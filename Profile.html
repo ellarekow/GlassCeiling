@@ -1,12 +1,23 @@
 <head>
     <link rel="stylesheet" href="Profile.css">
-    <script src="js/SelectProfilePic.js"></script>
+    <link rel="stylesheet" href="HomeCSS.css">
+    <script src="js/SelectProfilePic.js">
+    </script>
     <div style="position:relative; left:100px; right:50px; top:70px;">
         <h2>Your Posts</h2>
     </div>
 </head>
 
 <body onLoad=display()>
+    <form action="SearchBar.html" class="search-button">
+        <button type="submit"><img src="images/search.png"></button>
+    </form>
+
+    <form action="Profile.html" class="profile-button">
+        <button type="submit"><img src="images/GC.png"></button>
+    </form>
+    <br>
+    <br>
     <div id="image" style="position:relative;left:-500px; right:50px; top:150px;">
     </div>
     <div style="position:relative; left:-500px; right:50px; top:200px;">
