@@ -31,7 +31,9 @@ pomegranate.height="100";
 
 let pic=blank;
 
-function decidePic(){
+document.getElementById("pic").onchange = changePic;
+
+function changePic(){
     let choice = document.forms["profile"]["pic"].value;
     if(choice == "blank"){
        pic=blank;
@@ -40,6 +42,7 @@ function decidePic(){
     }else{
         pic=plum;
     }
+    display();
 }
 
 function display(){
