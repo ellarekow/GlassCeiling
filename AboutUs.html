@@ -1,7 +1,17 @@
 <head>
     <link rel="stylesheet" href="AboutUs_NewPost_SpecificPost.css">
+    <link rel="stylesheet" href="Menu.css">
 </head>
 <body>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="Profile.html">Profile</a>
+        <a href="NewPost.html">New Post</a>
+        <a href="AboutUs.html">About Us</a>
+      </div>
+
+      <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+
         <div id="pinkbox">  
             <h1>About Us</h1> 
             <br>
@@ -13,4 +23,14 @@
             environments" actually provide a safe place for their female employees to grow and be heard. We want
         women from all over to share their experiences, because we are all in this together.</h2>
         </div>
+
+        <script>
+            function openNav() {
+              document.getElementById("mySidenav").style.width = "250px";
+            }
+            
+            function closeNav() {
+              document.getElementById("mySidenav").style.width = "0";
+            }
+        </script>
 </body>

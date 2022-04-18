@@ -1,9 +1,18 @@
 <head>
     <link rel="stylesheet" href="SearchResults.css">
     <link rel="stylesheet" href="HomeCSS.css">
+    <link rel="stylesheet" href="Menu.css">
 </head>
 
 <body>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="Profile.html">Profile</a>
+        <a href="NewPost.html">New Post</a>
+        <a href="AboutUs.html">About Us</a>
+    </div>
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+
     <form action="SearchBar.html" class="search-button">
         <button type="submit"><img src="images/search.png"></button>
     </form>
@@ -30,4 +39,15 @@
             <input type="text" value="Default" style="background-color:#A76571">
         </div>
     </a>
+
+    <script>
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "250px";
+        }
+        
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+    
 </body>
