@@ -39,11 +39,20 @@
                 <option value="blueberry">Blueberry</option>
             </select>
         </form>
-        @anonapple <br>
-        Change Username <br><br>
+    
+        @sampleuser <br>
+
+        <button id="editprof">Edit Profile</button>
+
+        <script>
+            document.getElementById("editprof").onclick = function() {
+                location.href="EditProfile.html"
+            };
+        </script>
+        <!-- Change Username <br><br>
 
         Change Password <br><br>
-        Change Email <br><br>
+        Change Email <br><br> -->
 
         
             <div style="position:relative; left:500px; right:500px; right:50px; top:-300px;">
@@ -76,7 +85,7 @@
                 </a>
             </div>
 
-            <script>
+            <!-- <script>
                 function openNav() {
                   document.getElementById("mySidenav").style.width = "250px";
                 }
@@ -84,5 +93,6 @@
                 function closeNav() {
                   document.getElementById("mySidenav").style.width = "0";
                 }
-            </script>
+            </script> -->
+    </div>
 </body>
