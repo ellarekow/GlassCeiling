@@ -2,9 +2,11 @@
     <link rel="stylesheet" href="AboutUs_NewPost_SpecificPost.css">
     <link rel="stylesheet" href="Menu.css">
     <link rel="stylesheet" href="HomeCSS.css">
+    <script src= "js/Thumbs.js"></script>
+    </script>
 </head>
 
-<body>
+<body onLoad="display()">
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <a href="Profile.html">Profile</a>
@@ -27,7 +29,16 @@
                 It's wings are too small to get its fat little body off the ground.
                 The bee, of course, flies anyway, because bees don't care what humans think is impossible.</h3>
         </div>
+        <div id="thumbsup" style="position: absolute; left: 250px; top:340px;" onclick="upVote()">
+        </div>
+        <div id="thumbsdown" style="position: absolute; right: 250px; top:340px;" onclick="downVote()">
+        </div>
+        <div id="upVotes" style="position: absolute; left: 220px; top:340px;" onclick="upVote()">
+        </div>
+        <div id="downVotes" style="position: absolute; right: 220px; top:340px;" onclick="downVote()">
+        </div>
     </div>
+    
 
     <script>
         function openNav() {
