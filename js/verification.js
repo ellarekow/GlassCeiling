@@ -1,3 +1,11 @@
+class User {
+    constructor(uName, pic, email, password) {
+        this.uName = uName;
+        this.pic = pic;
+        this.email = email;
+        this.password = password;
+    }
+}
 function loginValidate() {
     const uNameResult = nameCheck(document.forms["Login Credentials"]["username"].value);
     const pwordResult = nameCheck(document.forms["Login Credentials"]["password"].value);
@@ -32,6 +40,7 @@ function signUpValidate() {
 
 
     if (Boolean(uNameResult) && Boolean(pwordResult) && Boolean(emailResult) && Boolean(pwordCResult)) {
+        let user = new User(document.forms["Sign Up Credentials"]["username"].value, 'blank', document.forms["Sign Up Credentials"]["email"].value, document.forms["Sign Up Credentials"]["password"].value)
         location.href = "./Home.html"
     }
 }
