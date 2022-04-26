@@ -30,10 +30,17 @@
         <input onClick="loginValidate()" type="button" id="submit" value="submit"></button>
 
         <p>
-            Never posted before? <br>
+            Never posted before? <br> <br>
             <a href="SignUpPage.html">Sign-up</a>
-            <br>
-            Continue as Guest
+            <br> <br>
+            <button id="guest">Continue as Guest</button>
+
+            <script>
+                document.getElementById("guest").onclick = function() {
+                    location.href="Home.html"
+                };
+            </script>
+            <!-- Continue as Guest -->
             <!-- will lead to the home feed -->
         </p>
     </div>
