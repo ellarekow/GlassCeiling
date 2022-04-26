@@ -22,6 +22,7 @@ public class SideBarTests{
     // Specific Post
     static String pathChromeDriver = "/Users/mccle/Downloads/driver/chromedriver.exe";
     static String aboutUs = "file:///C:/Users/mccle/Desktop/glassceiling/AboutUs.html";
+    static String home = "file:///C:/Users/mccle/Desktop/glassceiling/Home.html";
 
     @BeforeClass
     public static void openBrowser() {
@@ -40,7 +41,7 @@ public class SideBarTests{
     }
 
     @Test
-    public void loginSuccess() throws InterruptedException {
+    public void aboutToProfile() {
         driver.get(aboutUs);
         driver.manage().window().maximize();
 
@@ -49,6 +50,39 @@ public class SideBarTests{
         // TODO: get button click test
 
         assertEquals("file:///C:/Users/mccle/Desktop/glassceiling/Profile.html", driver.getCurrentUrl());
+
+    }
+
+    @Test
+    public void aboutToNewPost() {
+        driver.get(aboutUs);
+        driver.manage().window().maximize();
+
+        // side bar profile button click 
+        // should lead to Profile page
+        // TODO: get button click test
+
+        assertEquals("file:///C:/Users/mccle/Desktop/glassceiling/NewPost.html", driver.getCurrentUrl());
+
+    }
+
+    @Test 
+    public void homeToProfile() {
+        driver.get(home);
+
+        assertEquals("file:///C:/Users/mccle/Desktop/glassceiling/Profile.html", driver.getCurrentUrl());
+    }
+
+    @Test
+    public void homeToNewPost() {
+        driver.get(home);
+
+        assertEquals("file:///C:/Users/mccle/Desktop/glassceiling/NewPost.html", driver.getCurrentUrl());
+    }
+
+    @Test
+    public homeToAbout() {
+        driver.get(home);
 
     }
 
