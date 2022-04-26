@@ -45,9 +45,7 @@ public class SideBarTests{
         driver.get(aboutUs);
         driver.manage().window().maximize();
 
-        // side bar profile button click 
-        // should lead to Profile page
-        // TODO: get button click test
+        driver.findElement(By.id"mysidenav").click();
 
         assertEquals("file:///C:/Users/mccle/Desktop/glassceiling/Profile.html", driver.getCurrentUrl());
 
@@ -58,9 +56,7 @@ public class SideBarTests{
         driver.get(aboutUs);
         driver.manage().window().maximize();
 
-        // side bar profile button click 
-        // should lead to Profile page
-        // TODO: get button click test
+        driver.findElement(By.id"mysidenav").click();
 
         assertEquals("file:///C:/Users/mccle/Desktop/glassceiling/NewPost.html", driver.getCurrentUrl());
 
@@ -69,6 +65,9 @@ public class SideBarTests{
     @Test 
     public void homeToProfile() {
         driver.get(home);
+        driver.manage().window().maximize();
+
+        driver.findElement(By.id"mysidenav").click();
 
         assertEquals("file:///C:/Users/mccle/Desktop/glassceiling/Profile.html", driver.getCurrentUrl());
     }
@@ -76,15 +75,25 @@ public class SideBarTests{
     @Test
     public void homeToNewPost() {
         driver.get(home);
+        driver.manage().window().maximize();
+
+        driver.findElement(By.id"mysidenav").click();
 
         assertEquals("file:///C:/Users/mccle/Desktop/glassceiling/NewPost.html", driver.getCurrentUrl());
     }
 
     @Test
-    public homeToAbout() {
+    public void homeToAbout() {
         driver.get(home);
+        driver.manage().window().maximize();
 
+        driver.findElement(By.id"mysidenav").click();
+
+        assertEquals("file:///C:/Users/mccle/Desktop/glassceiling/AboutUs.html", driver.getCurrentUrl());
     }
+
+    @Test 
+
 
 
 }
