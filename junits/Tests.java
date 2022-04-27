@@ -17,6 +17,7 @@ public class Tests{
     static String loginPage = "file:///home/ellarekow/Documents/SE319/Glass Ceiling/Project/LoginPage.html";
     static String signUpPage = "file:///home/ellarekow/Documents/SE319/Glass Ceiling/Project/SignUpPage.html";
     static String specificPost = "file:///home/ellarekow/Documents/SE319/Glass Ceiling/Project/SpecificPost.html";
+    static String profile= "file:///home/ellarekow/Documents/SE319/Glass Ceiling/Project/Profile.html";
 
     @BeforeClass
     public static void openBrowser() {
@@ -120,5 +121,12 @@ public class Tests{
         assertEquals("images/up.png", document.getElementById("thumbsup").src);
     }
 
+@Test
+    public void editProfile() throws InterruptedException {
+        driver.get(profile);
+        driver.manage().window().maximize();
 
+        driver.findElement(By.id("editprof")).click();
+        assertEquals("file:///home/ellarekow/Documents/SE319/Glass%20Ceiling/Project/EditProfile.html", driver.getCurrentUrl());
+    }
 }
