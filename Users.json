@@ -1,0 +1,16 @@
+{
+    "Users": [
+        {
+            "uname": "ella",
+            "pword": "ellaspassword1",
+            "email": "ellasemail@mail.com",
+            "picture": "kiwi"
+        },
+        {
+            "uname": "max",
+            "email": "maxmail@mail.com",
+            "pword": "maxspassword1",
+            "picture": "pear"
+        }
+    ]
+}
