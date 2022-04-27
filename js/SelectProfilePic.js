@@ -34,7 +34,7 @@ let pic=blank;
 document.getElementById("pic").onchange = changePic;
 
 function changePic(){
-    let choice = document.forms["profile"]["pic"].value;
+    let choice = document.getElementById("pic").value;
     if(choice == "blank"){
        pic=blank;
     }else if(choice== "blueberry"){

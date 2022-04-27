@@ -5,6 +5,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
 
 import static org.junit.Assert.assertEquals;
 
@@ -139,6 +140,27 @@ public class Tests{
         driver.findElement(By.id("submit")).click();
         assertEquals("file:///home/ellarekow/Documents/SE319/Glass%20Ceiling/Project/Home.html", driver.getCurrentUrl());
     }
+@Test
+    public void selectProfilePic() throws InterruptedException {
+        driver.get(profile);
+        driver.manage().window().maximize();
 
+        Select se = new Select(driver.findElement(By.id("pic")));
+
+        se.selectByValue("plum");
+        assertEquals("images/plum.png", document.getElementById("image").src);
+
+        se.selectByValue("pear");
+        assertEquals("images/pear.png", document.getElementById("image").src);
+
+        se.selectByValue("pomegranate");
+        assertEquals("images/pomegranate.png", document.getElementById("image").src);
+
+        se.selectByValue("kiwi");
+        assertEquals("images/kiwi.png", document.getElementById("image").src);
+
+        se.selectByValue("blueberry");
+        assertEquals("images/blueberry.png", document.getElementById("image").src);
+    }
 }
 
