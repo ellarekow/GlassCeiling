@@ -23,6 +23,8 @@ public class SideBarTests{
     static String pathChromeDriver = "/Users/mccle/Downloads/driver/chromedriver.exe";
     static String aboutUs = "file:///C:/Users/mccle/Desktop/glassceiling/AboutUs.html";
     static String home = "file:///C:/Users/mccle/Desktop/glassceiling/Home.html";
+    static String newPost = "file:///C:/Users/mccle/Desktop/glassceiling/NewPost.html";
+    static String profile = "file:///C:/Users/mccle/Desktop/glassceiling/Profile.html";
 
     @BeforeClass
     public static void openBrowser() {
@@ -45,7 +47,7 @@ public class SideBarTests{
         driver.get(aboutUs);
         driver.manage().window().maximize();
 
-        driver.findElement(By.id"mysidenav").click();
+        driver.findElement(By.id("mySidenav")).click();
 
         assertEquals("file:///C:/Users/mccle/Desktop/glassceiling/Profile.html", driver.getCurrentUrl());
 
@@ -56,7 +58,7 @@ public class SideBarTests{
         driver.get(aboutUs);
         driver.manage().window().maximize();
 
-        driver.findElement(By.id"mysidenav").click();
+        driver.findElement(By.id("mySidenav")).click();
 
         assertEquals("file:///C:/Users/mccle/Desktop/glassceiling/NewPost.html", driver.getCurrentUrl());
 
@@ -67,7 +69,7 @@ public class SideBarTests{
         driver.get(home);
         driver.manage().window().maximize();
 
-        driver.findElement(By.id"mysidenav").click();
+        driver.findElement(By.id("mySidenav")).click();
 
         assertEquals("file:///C:/Users/mccle/Desktop/glassceiling/Profile.html", driver.getCurrentUrl());
     }
@@ -77,7 +79,7 @@ public class SideBarTests{
         driver.get(home);
         driver.manage().window().maximize();
 
-        driver.findElement(By.id"mysidenav").click();
+        driver.findElement(By.id("mySidenav")).click();
 
         assertEquals("file:///C:/Users/mccle/Desktop/glassceiling/NewPost.html", driver.getCurrentUrl());
     }
@@ -87,12 +89,38 @@ public class SideBarTests{
         driver.get(home);
         driver.manage().window().maximize();
 
-        driver.findElement(By.id"mysidenav").click();
+        driver.findElement(By.id("mySidenav")).click();
 
         assertEquals("file:///C:/Users/mccle/Desktop/glassceiling/AboutUs.html", driver.getCurrentUrl());
     }
 
     @Test 
+    public void newpostToProfile() {
+        driver.get(newPost);
+        driver.manage().window().maximize();
+
+        driver.findElement(By.id("mySidenav")).click();
+
+        assertEquals("file:///C:/Users/mccle/Desktop/glassceiling/Profile.html", driver.getCurrentUrl());
+    }
+
+    @Test
+    public void newpostToAbout() {
+        driver.get(newPost);
+        driver.manage().window().maximize();
+
+        driver.findElement(By.id("mySidenav")).click();
+
+        assertEquals("file:///C:/Users/mccle/Desktop/glassceiling/AboutUs.html", driver.getCurrentUrl());
+    }
+
+    @Test 
+    public void profileToNewPost() {
+        driver.get(profile);
+        driver.manage().window().maximize();
+
+        driver.findElement(By.id("mysidenat")).click();
+    }
 
 
 
