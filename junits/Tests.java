@@ -18,6 +18,7 @@ public class Tests{
     static String signUpPage = "file:///home/ellarekow/Documents/SE319/Glass Ceiling/Project/SignUpPage.html";
     static String specificPost = "file:///home/ellarekow/Documents/SE319/Glass Ceiling/Project/SpecificPost.html";
     static String profile= "file:///home/ellarekow/Documents/SE319/Glass Ceiling/Project/Profile.html";
+    static String newPost= "file:///home/ellarekow/Documents/SE319/Glass Ceiling/Project/NewPost.html";
 
     @BeforeClass
     public static void openBrowser() {
@@ -129,4 +130,15 @@ public class Tests{
         driver.findElement(By.id("editprof")).click();
         assertEquals("file:///home/ellarekow/Documents/SE319/Glass%20Ceiling/Project/EditProfile.html", driver.getCurrentUrl());
     }
+
+@Test
+    public void submitNewPost() throws InterruptedException {
+        driver.get(newPost);
+        driver.manage().window().maximize();
+
+        driver.findElement(By.id("submit")).click();
+        assertEquals("file:///home/ellarekow/Documents/SE319/Glass%20Ceiling/Project/Home.html", driver.getCurrentUrl());
+    }
+
 }
+
