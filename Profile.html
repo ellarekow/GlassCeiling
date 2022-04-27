@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="Menu.css">
     <script src="js/SelectProfilePic.js">
     </script>
-    <div style="position:relative; right:1px; top:150px;">
+    <div style="position:relative; right:1px; top:70px;">
         <h2>Your Posts</h2>
     </div>
 </head>
@@ -26,10 +26,10 @@
 
     <br>
     <br>
-    <div id="image" style="position:relative;left:-500px; right:50px; top:150px;">
+    <div id="image" style="position:relative;left:-500px; right:50px; top:0px;">
     </div>
-    <div style="position:relative; left:-500px; right:50px; top:200px;">
-
+    <div style="position:relative; left:-500px; right:50px; top:0px;">
+        <div style="position:relative; top:-260px;">
         <form id="profile">
             <label for="pic">Switch Profile Pic:</label>
             <select id="pic" onchange="changePic()">
@@ -41,7 +41,8 @@
                 <option value="blueberry">Blueberry</option>
             </select>
         </form>
-    
+    </div>
+        
         @sampleuser <br>
 
         <button id="editprof">Edit Profile</button>
@@ -51,11 +52,6 @@
                 location.href="EditProfile.html"
             };
         </script>
-        <!-- Change Username <br><br>
-
-        Change Password <br><br>
-        Change Email <br><br> -->
-
         
             <div style="position:relative; left:500px; right:500px; right:50px; top:-300px;">
                 <a href="SpecificPost.html">
