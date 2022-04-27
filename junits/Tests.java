@@ -140,6 +140,7 @@ public class Tests{
         driver.findElement(By.id("submit")).click();
         assertEquals("file:///home/ellarekow/Documents/SE319/Glass%20Ceiling/Project/Home.html", driver.getCurrentUrl());
     }
+
 @Test
     public void selectProfilePic() throws InterruptedException {
         driver.get(profile);
@@ -161,6 +162,15 @@ public class Tests{
 
         se.selectByValue("blueberry");
         assertEquals("images/blueberry.png", document.getElementById("image").src);
+    }
+
+    @Test
+    public void searchBar() throws InterruptedException {
+        driver.get(profile);
+        driver.manage().window().maximize();
+
+        driver.findElement(By.class("search-button")).click();
+        assertEquals("file:///home/ellarekow/Documents/SE319/Glass%20Ceiling/Project/SearchBar.html", driver.getCurrentUrl());
     }
 }
 
