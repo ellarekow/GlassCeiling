@@ -6,6 +6,8 @@ class User {
         this.password = password;
     }
 }
+
+
 function loginValidate() {
     const uNameResult = nameCheck(document.forms["Login Credentials"]["username"].value);
     const pwordResult = nameCheck(document.forms["Login Credentials"]["password"].value);
@@ -15,16 +17,39 @@ function loginValidate() {
     getNotification(Boolean(uNameResult), "uname");
     getNotification(Boolean(pwordResult), "pword");
 
-    console.log("uname: |", document.forms["Login Credentials"]["username"].value, "|", Boolean(uNameResult));
-    console.log("pword: ", document.forms["Login Credentials"]["password"].value, Boolean(pwordResult));
-    console.log("valid creds", Boolean(valid));
+    // console.log("uname: |", document.forms["Login Credentials"]["username"].value, "|", Boolean(uNameResult));
+    // console.log("pword: ", document.forms["Login Credentials"]["password"].value, Boolean(pwordResult));
+    // console.log("valid creds", Boolean(valid));
 
     if (Boolean(uNameResult) && Boolean(pwordResult) && Boolean(valid)) {
         location.href = "./Home.html"
     }
 }
 
+
 function userExsists(uname, pword) {
+    const file = fetch('users.txt').then(function (info) {
+        return info.text()
+    });
+
+    var reader = new FileReader()
+
+    reader.onload = function (evt) {
+        var lines = evt.result.split('\n');
+        for (var i = 0; i < lines.length; i++) {
+            console.log(lines[i]);
+            userinfo = lines[i].split(',');
+            for (var j = 0; j < userinfo.length; j++) {
+                console.log("info: ", userinfo[j], "\n");
+            }
+        }
+    }
+    reader.readAsText([""], file);
+
+
+
+
+
     if (pword == "password1" && uname == "user1")
         return true;
 
@@ -56,7 +81,7 @@ function signUpValidate() {
 }
 
 function nameCheck(name) {
-    console.log("input:", name);
+    // console.log("input:", name);
     let regex = /^[a-z0-9]+$/i;
     if (name != null && name.match(regex)) {
         return true;
@@ -66,7 +91,7 @@ function nameCheck(name) {
 }
 
 function pWordCheck(pword) {
-    console.log("input:", pword);
+    // console.log("input:", pword);
     let regex = /^[a-z0-9]+$/i;
     if (pword != null && pword.match(regex)) {
         return true;
@@ -116,6 +141,6 @@ function getNotification(bool, id) {
         label.innerHTML = bool ? "" : errors[id];
 
     document.getElementById(id).appendChild(label);
-    console.log(label.id);
-    console.log(label.innerHTML);
+    // console.log(label.id);
+    // console.log(label.innerHTML);
 }
