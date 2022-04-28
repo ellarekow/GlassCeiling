@@ -149,19 +149,19 @@ public class Tests{
         Select se = new Select(driver.findElement(By.id("pic")));
 
         se.selectByValue("plum");
-        assertEquals("images/plum.png", document.getElementById("image").src);
+        assertEquals("images/plum.png", driver.findElement(By.id("image")).getTagName();
 
         se.selectByValue("pear");
-        assertEquals("images/pear.png", document.getElementById("image").src);
+        assertEquals("images/pear.png", driver.findElement(By.id("image")).getTagName();
 
         se.selectByValue("pomegranate");
-        assertEquals("images/pomegranate.png", document.getElementById("image").src);
+        assertEquals("images/pomegranate.png", driver.findElement(By.id("image")).getTagName();
 
         se.selectByValue("kiwi");
-        assertEquals("images/kiwi.png", document.getElementById("image").src);
+        assertEquals("images/kiwi.png", driver.findElement(By.id("image")).getTagName();
 
         se.selectByValue("blueberry");
-        assertEquals("images/blueberry.png", document.getElementById("image").src);
+        assertEquals("images/blueberry.png", driver.findElement(By.id("image")).getTagName();
     }
 
     @Test
