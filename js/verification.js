@@ -12,7 +12,7 @@ function loginValidate() {
     const uNameResult = nameCheck(document.forms["Login Credentials"]["username"].value);
     const pwordResult = nameCheck(document.forms["Login Credentials"]["password"].value);
 
-    const valid = userExsists(document.forms["Login Credentials"]["username"].value, document.forms["Login Credentials"]["password"].value);
+    // const valid = userExsists(document.forms["Login Credentials"]["username"].value, document.forms["Login Credentials"]["password"].value);
 
     getNotification(Boolean(uNameResult), "uname");
     getNotification(Boolean(pwordResult), "pword");
@@ -21,30 +21,30 @@ function loginValidate() {
     // console.log("pword: ", document.forms["Login Credentials"]["password"].value, Boolean(pwordResult));
     // console.log("valid creds", Boolean(valid));
 
-    if (Boolean(uNameResult) && Boolean(pwordResult) && Boolean(valid)) {
+    if (Boolean(uNameResult) && Boolean(pwordResult)) {
         location.href = "./Home.html"
     }
 }
 
 
 function userExsists(uname, pword) {
-    const file = fetch('users.txt').then(function (info) {
-        return info.text()
-    });
+    // const file = fetch('users.txt').then(function (info) {
+    //     return info.text()
+    // });
 
-    var reader = new FileReader()
+    // var reader = new FileReader()
 
-    reader.onload = function (evt) {
-        var lines = evt.result.split('\n');
-        for (var i = 0; i < lines.length; i++) {
-            console.log(lines[i]);
-            userinfo = lines[i].split(',');
-            for (var j = 0; j < userinfo.length; j++) {
-                console.log("info: ", userinfo[j], "\n");
-            }
-        }
-    }
-    reader.readAsText([""], file);
+    // reader.onload = function (evt) {
+    //     var lines = evt.result.split('\n');
+    //     for (var i = 0; i < lines.length; i++) {
+    //         console.log(lines[i]);
+    //         userinfo = lines[i].split(',');
+    //         for (var j = 0; j < userinfo.length; j++) {
+    //             console.log("info: ", userinfo[j], "\n");
+    //         }
+    //     }
+    // }
+    // reader.readAsText([""], file);
 
 
 

@@ -106,7 +106,9 @@ public class Tests{
 
         //thumbs up should turn green after it's clicked
         driver.findElement(By.id("thumbsup")).click();
-        assertEquals("images/green.png", document.getElementById("thumbsup").src);
+
+        //needs to be this format
+        assertEquals("images/green.png", driver.findElement(By.id("thumbsup")).getTagName();
         
         //thumbs down should turn red after it's clicked and thumbs up should go back to gray
         driver.findElement(By.id("thumbsdown")).click();
@@ -169,7 +171,7 @@ public class Tests{
         driver.get(profile);
         driver.manage().window().maximize();
 
-        driver.findElement(By.class("search-button")).click();
+        driver.findElement(By.id("search-button")).click();
         assertEquals("file:///home/ellarekow/Documents/SE319/Glass%20Ceiling/Project/SearchBar.html", driver.getCurrentUrl());
     }
 }
