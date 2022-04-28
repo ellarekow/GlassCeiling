@@ -106,23 +106,21 @@ public class Tests{
 
         //thumbs up should turn green after it's clicked
         driver.findElement(By.id("thumbsup")).click();
-
-        //needs to be this format
         assertEquals("images/green.png", driver.findElement(By.id("thumbsup")).getTagName();
         
         //thumbs down should turn red after it's clicked and thumbs up should go back to gray
         driver.findElement(By.id("thumbsdown")).click();
-        assertEquals("images/red.png", document.getElementById("thumbsdown").src);
-        assertEquals("images/up.png", document.getElementById("thumbsup").src);
+        assertEquals("images/red.png", driver.findElement(By.id("thumbsdown")).getTagName();
+        assertEquals("images/up.png", driver.findElement(By.id("thumbsup")).getTagName();
        
         //thumbs up should turn green after it's clicked and thumbs down should go back to gray
         driver.findElement(By.id("thumbsup")).click();
-        assertEquals("images/green.png", document.getElementById("thumbsup").src);
-        assertEquals("images/down.png", document.getElementById("thumbsdown").src);
+        assertEquals("images/green.png", driver.findElement(By.id("thumbsup")).getTagName();
+        assertEquals("images/down.png", driver.findElement(By.id("thumbsdown")).getTagName();
 
         //thumbs up should go back to gray after it's clicked
         driver.findElement(By.id("thumbsup")).click();
-        assertEquals("images/up.png", document.getElementById("thumbsup").src);
+        assertEquals("images/up.png", driver.findElement(By.id("thumbsup")).getTagName();
     }
 
 @Test
