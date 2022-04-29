@@ -22,12 +22,9 @@ body {
     width: 50px;
 }
 
-/* .profile-button button {
+.profile-button button {
     border: 0;
     background: transparent;
     float: left;
-} */
-
-.sidenav {
-    float: left;
 }
+
